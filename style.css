@@ -5,6 +5,7 @@
 }
 body{
     background-color: rgb(177, 125, 227);
+    margin: 0;
 }
 h1{
     display: flex;
@@ -20,7 +21,7 @@ h1{
     height: 170px;
     width: 170px;
     margin-right: 100px;
-    background-color: aqua;
+    background-color: aquamarine;
 }
 .line1 .num{
     margin: 150px 70px 0 0;
@@ -62,6 +63,7 @@ h1{
     height: 85px;
     animation: box41 4s linear infinite alternate;
     transform-origin: center;
+    background-color: blue;
 }
 @keyframes box41{
     50%{
@@ -76,6 +78,7 @@ h1{
     height: 170px;
     width: 50px;
     animation: box42 4s linear infinite alternate;
+    background-color: yellowgreen;
     transform-origin: center;
 }
 @keyframes box42{
@@ -100,174 +103,37 @@ a{
     font-size: 3rem;
     margin-top: 50px;
 }
-ol li{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-.page1box{
-    height: 150px;
-    margin-top: 20px;
-    width: 150px;
-    background-color: aquamarine;
-}
-ol .num{
-    margin: 140px 20px 0 0;
-}
-.page1box{
-    transition: all 3s linear;
-    transform-origin: left;
-}
-.page1box:hover{
-    transform: scaleX(3);
-}
-.page1box2{
-    height: 150px;
-    width: 150px;
-    background-color: aquamarine;
-    transition: all 3s linear;
-    transform-origin: left;
-}
-.page1box2:hover{
-    width: 300px;
-    height: 300px;
-}
-
-
-
-/* .firstline{
-    display: flex;
-    column-gap: 100px;
-    margin-top: 70px;
-}
-ol{
-    display: block;
-}
-.firstbox{
-    height: 150px;
-    width: 150px;
-    background-color: aqua;
-    animation: line1 4s linear infinite alternate;
-}
-@keyframes line1{
-    0%{
-        transform: skew(25deg);
-    }
-    100%{
-        transform: skew(-25deg);
-    }
-}
-@keyframes line2{
-    0%{
-        transform: skewy(25deg);
-    }
-    100%{
-        transform: skewy(-25deg);
-    }
-}
-.secondbox{
-    height: 150px;
-    width: 150px;
-    background-color: aqua;
-    animation: line2 4s linear infinite alternate;
-}
-.thirdbox{
-    height: 150px;
-    width: 150px;
-    background-color: aqua;
-    animation: line3 4s linear infinite;
-}
-@keyframes line3{
-    100%{
-        transform: rotate(360deg);
-    }
-}
-.line4{
-    margin-top: 150px;
-}
-.box1{
-    height: 75px;
-    width: 150px;
-    background-color: aqua;
-    animation: firstbox 4s ease-in-out;
-    animation-iteration-count: infinite;
-    transform-origin: bottom;
-    
-}
-@keyframes firstbox{
-    50%{
-        transform: scaleY(2);
-    }
-    100%{
-        transform: scaleY(1);
-    }
-}
-.box2{
-    height: 150px;
-    width: 70px;
-    background-color: aqua;
-    animation: secondbox 4s ease-in-out;
-    animation-iteration-count: infinite;
-    transform-origin: center;
-}
-@keyframes secondbox{
-    50%{
-        transform: scaleX(2);
-    }
-    100%{
-        transform: scaleX(1);
-    }
-}
-.box3{
-    height: 150px;
-    background-color: aqua;
-    width: 150px;
-    animation: thirdbox 5s ease-in-out;
-    animation-iteration-count: infinite;   
-}
-@keyframes thirdbox{
-    50%{
-        transform: rotate(-90deg);
-    }
-    100%{
-        transform: rotate(80deg);
-    }
-}
-a{
-    display: block;
-    font-size: 3rem;
-    margin-top: 20px;
-    margin-left: 30%;
-    text-decoration: underline;
-}
-ol{
+                                /*page1 */
+.container1{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.page1box{
+.line01{
     height: 150px;
     width: 150px;
-    background-color: greenyellow;
-    margin-top: 20px;
-    transform-origin: left;
+    margin-top: 40px;
+    background-color: navy;
 }
-.page1box1:hover{
-    transform: scaleX(3);
+.line01{
     transition: all 2s linear;
 }
+.line01:hover{
+    width: 450px;
+}
 .page1box2{
-    transition: all 2s ease-in-out;
-    transform-origin: left;
+    height: 150px;
+    width: 150px;
+    background-color: navy;
+    transition: all 2s linear;
 }
 .page1box2:hover{
-    transform: scale(3, 3);
-    height: 350px;
-    width: 350px;
+    width: 450px;
+    height: 450px;
 }
 
-                                   /* Page2 */
-/* .text{
+                                   /* Page3 */
+.text{
     position: absolute;
     top: 0;
     right: 30%;
@@ -295,6 +161,22 @@ ol{
     background-size: cover;
     position: relative;
     overflow-x: hidden;
+}
+.sun{
+    position: absolute;
+    right: 20px;
+    top: 90px;
+}
+.sun img{
+    animation: sun 50s linear infinite;
+}
+@keyframes sun {
+    0%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(-1500px);
+    }
 }
 .road{
     height: 130px;
@@ -338,6 +220,15 @@ ol{
     bottom: -55px;
     right: 480px;
     z-index: 5;
+    animation: car 2s linear alternate infinite;
+}
+@keyframes car{
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
 }
 .car .flag{
     position: absolute;
@@ -345,4 +236,28 @@ ol{
     right: 350px;
     height: 70px;
     width: 70px;
-} */
+    animation: flag 2s linear alternate infinite;
+}
+@keyframes flag {
+    50%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+}
+.wheel{
+    position: absolute;
+    width: 600px;
+    bottom: 76px;
+    left: 136px;
+}
+.wheel img{
+    margin-right: 182px;
+    animation: wheel .7s linear infinite;
+}
+@keyframes wheel {
+    100%{
+        transform: rotate(360deg);
+    }
+}
